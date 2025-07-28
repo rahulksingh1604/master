@@ -1,4 +1,4 @@
-function EmployeeDetails(){
+function EmployeeDetails() {
   return (
     <div>
       <h1>Employee Details</h1>
@@ -11,7 +11,7 @@ function EmployeeDetails(){
       <label>Department: </label>
       IT
       <br />
-      <label style={{ color: "red" , fontWeight: "bold"}}>Note: Employee details using JSX.</label>
+      <label style={{ color: "red", fontWeight: "bold" }}>Note: Employee details using JSX.</label>
     </div>
   );
 }
