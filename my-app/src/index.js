@@ -5,14 +5,8 @@ import reportWebVitals from './reportWebVitals';
 import EmployeeDetails from './EmployeeDetails';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-let breakElement = React.createElement("br", {});
-let HWElement = React.createElement("div",{},"Hello World!");
-let NoteElement = React.createElement("label", { style: { color: "red", fontWeight: "bold" } }, "Note: Hello World using React.");
 root.render(<div>
   <EmployeeDetails />
-  { breakElement }
-  { HWElement }
-  { NoteElement }
 </div>
 );
 
