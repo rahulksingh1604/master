@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import EmployeeDetails  from './EmployeeDetails';
+import EmployeeDetails from './EmployeeDetails';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 let breakElement = React.createElement("br", {});
