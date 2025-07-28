@@ -1,12 +1,11 @@
-import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import EmployeeDetails from './EmployeeDetails';
+import Employee from './Employee';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<div>
-  <EmployeeDetails />
+  <Employee />
 </div>
 );
 
