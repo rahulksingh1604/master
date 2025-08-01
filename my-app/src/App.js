@@ -1,12 +1,10 @@
 import './App.css';
-import ClassComponent from './ClassComponent';
-import FunctionComponent from './FunctionComponent';
+import HeadingColorChange from './HeadingColorChange';
 
 function App() {
   return (
     <div className="App">
-    <ClassComponent />
-    <FunctionComponent />
+      <HeadingColorChange />
     </div>
   );
 }
