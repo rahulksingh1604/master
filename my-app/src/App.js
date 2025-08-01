@@ -1,10 +1,10 @@
 import './App.css';
-import HeadingColorChange from './HeadingColorChange';
+import RegistrationForm from './RegistrationForm';
 
 function App() {
   return (
     <div className="App">
-      <HeadingColorChange />
+      <RegistrationForm />
     </div>
   );
 }
