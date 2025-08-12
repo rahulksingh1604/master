@@ -1,42 +1,42 @@
-const RegistrationForm = () => {
-    const submitDetails =(e) => {
-        e.preventDefault();
-        const name = e.target.name.value;
-        const email = e.target.email.value;
-        const password = e.target.password.value;
-        const confirmPassword = e.target.confirmPassword.value;
+import { useFormik } from 'formik';
 
-        if (name && email && password && confirmPassword) {
-            if (password === confirmPassword) {
-                alert(`Registration successful for ${name}!`);
-            } else {
-                alert("Passwords do not match!");
-            }
-        } else {
-            alert("Please fill all fields!");
+const RegistrationForm = () => {
+
+    const formik = useFormik({
+        initialValues: {
+            UserName: '',
+            Password: ''
+        },
+        onSubmit: (values) => {
+            alert(JSON.stringify(values, null, 2));
         }
-    }
+    });
+
     return (
-        <form onSubmit={submitDetails}>
+        <form onSubmit={formik.handleSubmit}>
             <h1>Registration Form</h1>
-            <div>
-                <label>Name :</label>
-                <input type="text" name="name" autocomplete="off"/>
+            <div className='mb-3'>
+                <label>User Name :</label>
+                <input
+                    className="form-control"
+                    type="text"
+                    name="UserName"
+                    onChange={formik.handleChange}
+                    value={formik.values.UserName}
+                />
             </div>
-            <div>
-                <label>Email :</label>
-                <input type="text" name="email" autocomplete="off"/>
-            </div>
-            <div>
+            <div className='mb-3'>
                 <label>Password :</label>
-                <input type="password" name="password" />
+                <input
+                    className="form-control"
+                    type="password"
+                    name="Password"
+                    onChange={formik.handleChange}
+                    value={formik.values.Password}
+                />
             </div>
-            <div>
-                <label>Confirm password :</label>
-                <input type="text" name="confirmPassword" />
-            </div>
-            <button type="submit">Register</button>
-            <button type="reset">Reset</button>
+            <button className='btn btn-primary' type="submit">Register</button>
+            <button className='btn btn-secondary' type="reset">Reset</button>
         </form>
     )
 }
